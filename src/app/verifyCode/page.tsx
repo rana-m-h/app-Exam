@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function VerifyCode() {
   const router = useRouter();
@@ -58,7 +58,7 @@ export default function VerifyCode() {
             <p className="text-md-start ms-5 text">
             Quidem autem voluptatibus qui quaerat aspernatur architecto natus
             </p>
-            <Image
+            <img
              src="/bro.png"
               alt="Illustration"
               className="img-fluid "
@@ -107,25 +107,25 @@ export default function VerifyCode() {
           onClick={() => signIn("google", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <Image width={20} height={20} alt="google" src={"/Logo Google.png"} />
+          <img width={20} height={20} alt="google" src={"/Logo Google.png"} />
         </div>
         <div
           onClick={() => signIn("facebook", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <Image width={20} height={20} alt="fasbook" src={"/Vector.png"} />
+          <img width={20} height={20} alt="fasbook" src={"/Vector.png"} />
         </div>
         <div
           onClick={() => signIn("twitter", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <Image width={20} height={20} alt="twitter" src={"/Logo.png"} />
+          <img width={20} height={20} alt="twitter" src={"/Logo.png"} />
         </div>
         <div
           onClick={() => signIn("github", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <Image width={20} height={20} alt="Apple" src={"/Logo (1).png"} />
+          <img width={20} height={20} alt="Apple" src={"/Logo (1).png"} />
         </div>
               </div>
             </div>

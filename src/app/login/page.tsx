@@ -4,7 +4,7 @@
 import LoginForm from "@/components/login/Login";
 import Link from "next/link";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from "next/image";
+
 
 
 export default function Signin() {
@@ -18,7 +18,7 @@ export default function Signin() {
             <p className="text-md-start ms-5 text">
             Quidem autem voluptatibus qui quaerat aspernatur architecto natus
             </p>
-            <Image
+            <img
              src="/bro.png"
               alt="Illustration"
               className="img-fluid"

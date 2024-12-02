@@ -55,7 +55,7 @@ export const options: NextAuthOptions = {
           type: "password",
         },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         const res = await fetch("https://exam.elevateegy.com/api/v1/auth/signin", {
           method: "POST",
           headers: {

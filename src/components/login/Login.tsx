@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Image from "next/image";
+
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -86,25 +86,25 @@ export default function LoginForm() {
                 onClick={() => signIn("google", { callbackUrl: "/home" })}
                 className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
               >
-                <Image width={20} height={20} alt="google" src={"/Logo Google.png"} />
+                <img width={20} height={20} alt="google" src={"/Logo Google.png"} />
               </div>
               <div
                 onClick={() => signIn("facebook", { callbackUrl: "/home" })}
                 className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
               >
-                <Image width={20} height={20} alt="facebook" src={"/Vector.png"} />
+                <img width={20} height={20} alt="facebook" src={"/Vector.png"} />
               </div>
               <div
                 onClick={() => signIn("twitter", { callbackUrl: "/home" })}
                 className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
               >
-                <Image width={20} height={20} alt="twitter" src={"/Logo.png"} />
+                <img width={20} height={20} alt="twitter" src={"/Logo.png"} />
               </div>
               <div
                 onClick={() => signIn("github", { callbackUrl: "/home" })}
                 className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
               >
-                <Image width={20} height={20} alt="github" src={"/Logo (1).png"} />
+                <img width={20} height={20} alt="github" src={"/Logo (1).png"} />
               </div>
             </div>
           </div>
