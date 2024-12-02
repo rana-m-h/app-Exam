@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { signIn } from "next-auth/react";
-
+import Image from "next/image";
 export default function Register() {
   const router = useRouter();
   const [errorMessage, setErrorMessage] = useState("");
@@ -80,7 +80,7 @@ export default function Register() {
             <p className="text-md-start ms-5 text">
               Quidem autem voluptatibus qui quaerat aspernatur architecto natus
             </p>
-            <img
+            <Image
               src="/bro.png"
               alt="Illustration"
               className="img-fluid mt-5"
@@ -223,25 +223,25 @@ export default function Register() {
           onClick={() => signIn("google", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <img width={20} height={20} alt="google" src={"/Logo Google.png"} />
+          <Image width={20} height={20} alt="google" src={"/Logo Google.png"} />
         </div>
         <div
           onClick={() => signIn("facebook", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <img width={20} height={20} alt="fasbook" src={"/Vector.png"} />
+          <Image width={20} height={20} alt="fasbook" src={"/Vector.png"} />
         </div>
         <div
           onClick={() => signIn("twitter", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <img width={20} height={20} alt="twitter" src={"/Logo.png"} />
+          <Image width={20} height={20} alt="twitter" src={"/Logo.png"} />
         </div>
         <div
           onClick={() => signIn("github", { callbackUrl: "/home" })}
           className="login-item flex justify-center hover:shadow-lg items-center border p-2 shadow-md rounded-lg cursor-pointer mx-1"
         >
-          <img width={20} height={20} alt="Apple" src={"/Logo (1).png"} />
+          <Image width={20} height={20} alt="Apple" src={"/Logo (1).png"} />
         </div>
               </div>
             </div>
