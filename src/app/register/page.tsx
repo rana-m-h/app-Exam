@@ -1,16 +1,18 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { signIn } from "next-auth/react";
 
+
+
 export default function Register() {
   const router = useRouter();
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setMessage] = useState("");
 
   const validationSchema = Yup.object({
     username: Yup.string().required("Username is required."),
@@ -43,7 +45,6 @@ export default function Register() {
     },
     validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
-      setErrorMessage(""); 
       try {
         const response = await fetch("https://exam.elevateegy.com/api/v1/auth/signup", {
           method: "POST",
@@ -54,22 +55,27 @@ export default function Register() {
         const data = await response.json();
 
         if (!response.ok) {
-          setErrorMessage(data.message || "Registration failed. Please try again.");
+          setMessage(data.message || "Registration failed. Please try again.");
         } else {
-         
-          alert("Registration successful! Redirecting to login...");
-          resetForm();
+        
+      
+        if (data.token) {
+          localStorage.setItem("Token", data.token);
+       
+          setMessage("Registration successful");
           router.push("/login");
+        } else {
+          setMessage("Registration successful but no token received.");
         }
+        resetForm();
+      }
       } catch (error) {
-        console.error("An error occurred:", error);
-        setErrorMessage("An error occurred. Please try again later.");
+        setMessage(" Please try again later.");
       } finally {
         setSubmitting(false);
       }
     },
   });
-
   return (
     <div className="container min-vh-75 mb-5 mt-5 d-flex bg-light h-100 w-50">
       <div className="row">
@@ -215,6 +221,8 @@ export default function Register() {
               >
                 {formik.isSubmitting ? "Registering..." : "Register"}
               </button>
+
+
               <div className="text-center mt-3">
               <p>Or continue with</p>
               <div className="d-flex justify-content-center">
@@ -245,6 +253,7 @@ export default function Register() {
         </div>
               </div>
             </div>
+            
             </form>
           </div>
         </div>
@@ -255,34 +264,3 @@ export default function Register() {
 
            
       
-
-
-
-
-
-
-
-
-      
-
-       
-    
-
-
-
-  
-
-
-  
-
-
-
-  
-  
-
-
-
-
-
-
-

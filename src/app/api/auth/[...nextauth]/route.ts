@@ -1,4 +1,5 @@
 
+
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
@@ -21,8 +22,9 @@ export const options: NextAuthOptions = {
       }
       return token;
     },
-  },
 
+  },
+      
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -56,7 +58,7 @@ export const options: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
-        const res = await fetch("https://exam.elevateegy.com/api/v1/auth/signin", {
+        const response = await fetch("https://exam.elevateegy.com/api/v1/auth/signin", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -67,8 +69,8 @@ export const options: NextAuthOptions = {
           }),
         });
 
-      
-        const user = await res.json();
+       
+        const user = await response.json()  
 
         if (user && user.user?.email === credentials?.email) {
        
@@ -82,6 +84,9 @@ export const options: NextAuthOptions = {
           return null;
         }
       },
+
+
+      
     }),
   ],
 

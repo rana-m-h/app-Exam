@@ -26,7 +26,7 @@ export default function LoginForm() {
     const response = await signIn("credentials", {
       email,
       password,
-      callbackUrl: "/home",
+      callbackUrl: "/Quizes",
     });
 
     

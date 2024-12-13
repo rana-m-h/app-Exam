@@ -50,3 +50,107 @@ width: 30px;
 .mb{
   margin-bottom: 5rem;
 }
+.width{
+  width:72rem ;
+}
+.style{
+  background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.2));
+}
+
+.font{
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+  color:  rgba(105, 111, 121, 1);
+  font-size: 20px;
+ 
+}
+.font2{
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 500;
+  color:  rgba(68,97,242,1);
+  font-size: 24px;
+
+}
+
+.icon{
+  color:  rgba(68,97,242,1);
+}
+.Icon{
+  color: #fff;
+}
+
+.width{
+  width: 11rem;
+
+}
+.margin{
+  margin-top: 4.3rem;
+}
+.main-content {
+  flex: 1;
+  padding: 20px;
+
+}
+.user-avatar {
+  width: 7rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+.img{
+
+  height: 3.5rem;
+ 
+}
+
+.quiz-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-details {
+  flex: 1;
+  padding: 0 15px;
+}
+.logo {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.mobile-header{
+  display: none;
+}
+.header{
+  display: none;
+}
+
+
+.hover:hover{
+  background: blue;
+  color: white;
+.icon{
+  color: white;
+}
+border-radius: 15px;
+padding: 10px
+  
+}
+
+
+@media (max-width: 768px) {
+  .display{
+    display: none;
+  }
+  .mobile-header{
+    display: flex;
+  }
+  .header.visible {
+    display: block; /* Show the header when toggled */
+  }
+}

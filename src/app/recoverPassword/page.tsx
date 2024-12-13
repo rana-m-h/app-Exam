@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function ForgotPassword() {
 const router = useRouter();

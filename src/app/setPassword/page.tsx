@@ -52,7 +52,7 @@ export default function SetNewPassword() {
  
   const updatePassword = async (email: string, newPassword: string) => {
     try {
-      const response = await fetch("https://exam.elevateegy.com/api/v1/auth/resetPassword", {
+      const response = await  fetch("https://exam.elevateegy.com/api/v1/auth/resetPassword", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,6 @@ export default function SetNewPassword() {
   return (
     <div className="container min-vh-75 mb-5 mt-5 d-flex bg-light   w-50">
     <div className="row">
-
     <div className="col-md-6 image shadow  ">
           <div className="text-center">
             <h2 className="text-md-start ms-5">Welcome to</h2>
